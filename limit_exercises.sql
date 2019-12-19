@@ -12,4 +12,14 @@ SELECT DISTINCT last_name FROM employees ORDER BY last_name DESC LIMIT 10;
 SELECT first_name FROM employees WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31' AND birth_date LIKE '%12-25' LIMIT 5; -- 362 rows
 SELECT first_name, last_name FROM employees WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31' AND birth_date LIKE '%12-25' ORDER BY birth_date, hire_date DESC LIMIT 5; -- 362 rows
 
+/*
+ Try to think of your results as batches, sets, or pages. The first five results are your first page.
+ The five after that would be your second page, etc.
+ Update the query to find the tenth page of results. The employee names should be:
+
+ LIMIT and OFFSET can be used to create multiple pages of data. What is the relationship between OFFSET (number of results to skip), LIMIT (number of results per page), and the page number?
+ */
+
+SELECT first_name, last_name FROM employees LIMIT 5 OFFSET 50;
+
 
