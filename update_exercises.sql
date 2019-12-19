@@ -7,7 +7,6 @@ UPDATE albums
 SET sales = (sales * 10);
 SELECT * FROM albums;
 
-
 SELECT 'ALL ALBUMS BEFORE 1980' AS '';
 SELECT * FROM albums WHERE release_date < 1980;
 SELECT  'BACK 100 YRS ----------' AS '';
