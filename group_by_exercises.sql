@@ -91,5 +91,7 @@ GROUP BY last_name
 ORDER BY char_length(last_name) DESC
 LIMIT 1;
 # what is the lowest employee number for the first senior engineers in the company?
-SELECT MIN(emp_no) FROM titles
-WHERE title LIKE 'senior%engineer';
+SELECT emp_no FROM titles
+WHERE title LIKE 'senior%engineer'
+ORDER BY from_date, emp_no
+LIMIT 1;
